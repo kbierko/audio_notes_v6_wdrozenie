@@ -119,7 +119,7 @@ def list_notes_from_db(query=None):
 #
 # MAIN
 #
-st.set_page_config(page_title="Audio notatki", page_icon=":microphone:", layout="centered")
+st.set_page_config(page_title="Audio Notes", page_icon=":microphone:", layout="centered")
 
 # OpenAI API key protection
 if not st.session_state.get("openai_api_key"):
@@ -149,7 +149,7 @@ if "note_audio_text" not in st.session_state:
     st.session_state["note_audio_text"] = ""
 
 
-st.title(":microphone: Audio notatki")
+st.title(":microphone: Audio Notes")
 assure_db_collection_exists()
 
 add_tab, search_tab = st.tabs(["Dodaj notatke", "Wyszukaj notatkę"])
